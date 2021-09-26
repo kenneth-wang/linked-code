@@ -11,7 +11,15 @@
     ```
 
 3. Download the GUI [https://www.mongodb.com/try/download/compass](https://www.mongodb.com/try/download/compass)
-4. Import the data (*.json) in GUI. Importing repo data takes about 10 mins. Importing user data takes about 25 mins.
+4. Import the data (*.json)
+a) Using GUI. Importing repo data takes about 10 mins. Importing user data takes about 25 mins.
+b) Using CLI
+    ```bash
+    mongoimport --db='db_name' --collection='collection_name' --file='one_big_list.json' --jsonArray
+    ```
+    Note the file needs to be a list of json i.e. there must be square brackets at the start and end. If there are no square brackets in the file, try removing the last flag 'jsonArray' in the command.
+
+
 5. PySpark
 
     ```python
