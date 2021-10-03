@@ -17,16 +17,18 @@
     ```
 
 3. Download the GUI [https://www.mongodb.com/try/download/compass](https://www.mongodb.com/try/download/compass)
+
 4. Import the data (*.json)
 
     a) Using GUI. Importing repo data takes about 10 mins. Importing user data takes about 25 mins.
 
     b) Using CLI
+
     ```bash
     mongoimport --db='db_name' --collection='collection_name' --file='one_big_list.json' --jsonArray
     ```
-    Note the file needs to be a list of json i.e. there must be square brackets at the start and end. If there are no square brackets in the file, try removing the last flag 'jsonArray' in the command.
 
+    Note the file needs to be a list of json i.e. there must be square brackets at the start and end. If there are no square brackets in the file, try removing the last flag 'jsonArray' in the command.
 
 5. PySpark
 
@@ -34,15 +36,18 @@
     from pyspark import SparkConf, SparkContext
     from pyspark.sql import SparkSession
 
+    COLLECTION_NAME = "gh.repos"
+
     spark = SparkSession \
             .builder \
             .appName("reviews") \
-            .config("spark.mongodb.input.uri", "mongodb://localhost:27017/...") \
-            .config("spark.mongodb.output.uri", "mongodb://localhost:27017/...") \
+            .config("spark.mongodb.input.uri", "mongodb://localhost:27017/" + COLLECTION_NAME) \
             .config("spark.jars.packages", "org.mongodb.spark:mongo-spark-connector_2.12:3.0.0") \
             .getOrCreate()
-        # Azmi: This was my test to convert Lab1 to use mondgodb. If we are reading into spark
-        # dataframe, no need to convert to JSON (i.e. remove last method).
-        reviews = spark.read.format("com.mongodb.spark.sql.DefaultSource").load().toJSON()
-        metas = spark.read.format("com.mongodb.spark.sql.DefaultSource").option("uri","mongodb://localhost:27017/lab1.reviews").load().toJSON()
+
+    df_repos = (spark
+        .read.format("com.mongodb.spark.sql.DefaultSource")
+        .option("uri","mongodb://localhost:27017/" + COLLECTION_NAME)
+        .load()
+    )
     ```
