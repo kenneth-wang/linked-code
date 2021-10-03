@@ -7,6 +7,12 @@
 2. Run a MongoDB instance using Docker
 
     ```bash
+    docker start cs5344
+    ```
+
+    If it's your first time, do
+
+    ```bash
     docker run --name cs5344 -p 27017:27017 -d mongo
     ```
 
