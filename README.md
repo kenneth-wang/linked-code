@@ -12,8 +12,10 @@
 
 3. Download the GUI [https://www.mongodb.com/try/download/compass](https://www.mongodb.com/try/download/compass)
 4. Import the data (*.json)
-a) Using GUI. Importing repo data takes about 10 mins. Importing user data takes about 25 mins.
-b) Using CLI
+
+    a) Using GUI. Importing repo data takes about 10 mins. Importing user data takes about 25 mins.
+
+    b) Using CLI
     ```bash
     mongoimport --db='db_name' --collection='collection_name' --file='one_big_list.json' --jsonArray
     ```
