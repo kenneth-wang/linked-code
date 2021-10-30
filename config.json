@@ -1,0 +1,12 @@
+{
+    "data": {
+        "mongodb_uri": "localhost:27017/",
+        "repository_tbl": "cs5344.repos",
+        "user_tbl": "cs5344.users",
+        "combined_tbl": "cs5344.combined"
+    },
+    "recommender": {
+        "_comment": "save_preprocess is a flag to save output from preprocessing",
+        "save_preprocess": false
+    }
+}
