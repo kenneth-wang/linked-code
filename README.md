@@ -24,6 +24,10 @@ The project is made up of several use cases. You can review the following script
 
 ## Use Case 2: Find similar repositories based on keywords
 
+1. Retrieving a list of similar repositories given a set of input keywords
+
+Run the [notebook](./notebooks/similar_repos.ipynb) to encode the input keywords and repository descriptions that are found in the dataset. With the vector embeddings, Annoy python package is used to retrieve the list of similar repositories.
+
 ## Use Case 3: Recommend Repositories to Users
 
 1. Preparing the data
