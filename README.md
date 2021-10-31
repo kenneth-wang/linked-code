@@ -1,5 +1,50 @@
-# linked-code
+![linkedcode](logo.png)
 
+# About the Project
+
+# Built With
+- MongoDB
+- Python
+- PySpark
+- Jupyter
+
+# Getting Started
+1. Clone this repository onto your local machine
+2. Create a virtual environement using the `conda.yml` file
+3. Install MongoDB suitable for your operating system or download a docker image with MongoDB pre-installed.
+4. Follow the instructions below to download and ingest the data into the database
+
+# Usage
+
+The project is made up of several use cases. You can review the following scripts and notebooks for each of them.
+
+## Exploratory Data Analysis
+
+## Use Case 1: Looking for Similar Developers
+
+## Use Case 2: Find similar repositories based on keywords
+
+## Use Case 3: Recommend Repositories to Users
+
+1. Preparing the data
+
+This [script](./src/preprocess_collabfilt.py) is used to prepare the data for training the model. Run the script in the src folder before opening the notebook in the next part.
+
+`> python preprocess_collabfilt.py`
+
+2. Training the model and providing recommendations
+
+The [notebook](./notebooks/recommender_als.ipynb) will read in the previously prepared data, build the model and display a recommendation for a randomly selected user from the test set. The model will also be saved in the models folder.
+
+## Use Case 4: Grouping developers into communities
+
+
+# Acknowledgements
+This project was created as part of the coursework for the CS5344 module in Semester 1 AY 2021/2022 from NUS.
+
+# Appendix
+
+## Loading the data into MongoDB
 1. Download the data
 
     [https://drive.google.com/drive/folders/1ZgashUWwLhh6RfENcZXB8uxwDf8zZ15p](https://drive.google.com/drive/folders/1ZgashUWwLhh6RfENcZXB8uxwDf8zZ15p)
