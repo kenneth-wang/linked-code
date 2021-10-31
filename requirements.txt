@@ -1,0 +1,8 @@
+annoy==1.17.0
+jupyter==1.0.0
+ipykernel==6.4.1
+matplotlib==3.4.3
+pandas==1.2.5
+seaborn==0.11.2
+pyspark==3.1.2
+spark-nlp==3.3.0
