@@ -2,6 +2,8 @@
 
 # About the Project
 
+LinkedCode is a professional social networking platform for both recruiters and developers. In this project, we present the 4 key features that will make this platform unique and useful. LinkedCode aims to have to have following functionalities; a) The ability to search for similar developers for a given profile b) Find related repositories based on query keywords c) Recommend repositories to users and finally d) Identity communities of similar users.
+
 # Built With
 - MongoDB
 - Python
@@ -17,8 +19,6 @@
 # Usage
 
 The project is made up of several use cases. You can review the following scripts and notebooks for each of them.
-
-## Exploratory Data Analysis
 
 ## Use Case 1: Looking for Similar Developers
 
