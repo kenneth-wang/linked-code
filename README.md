@@ -22,6 +22,8 @@ The project is made up of several use cases. You can review the following script
 
 ## Use Case 1: Looking for Similar Developers
 
+Run the [notebook](./notebooks/similar_users.ipynb) and enter inputs (user ID or a list of languages) in order to retrieve most similar users.
+
 ## Use Case 2: Find similar repositories based on keywords
 
 1. Retrieving a list of similar repositories given a set of input keywords
