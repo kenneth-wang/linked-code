@@ -43,7 +43,7 @@ This [script](./src/preprocess_collabfilt.py) is used to prepare the data for tr
 The [notebook](./notebooks/recommender_als.ipynb) will read in the previously prepared data, build the model and display a recommendation for a randomly selected user from the test set. The model will also be saved in the models folder.
 
 ## Use Case 4: Grouping developers into communities
-
+Different from the other 3 notebooks, the input data in this case is read from the local disk rather than remote server. You need to download the dataset (i.e. user.json) to the same directory as the [notebook](./notebooks/cluster.ipynb), then run the [notebook](./notebooks/cluster.ipynb) step by step to read in and preprocess the data, extract features, train the models and obtain the clustering results.
 
 # Acknowledgements
 This project was created as part of the coursework for the CS5344 module in Semester 1 AY 2021/2022 from NUS.
